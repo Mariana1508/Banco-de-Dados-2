@@ -23,6 +23,11 @@ INSERT INTO Clientes (nomeCliente, emailCliente) VALUES
     ('Ana Souza', 'ana.souza@email.com');
 
 -- Inserindo dados na tabela Compras
+
+SELECT Clientes.nomeCliente, Compras.NomeLivro
+FROM Compras
+INNER JOIN Clientes ON Compras.ClienteID = Clientes.ID;
+
 INSERT INTO Compras (ClienteID, NomeLivro) VALUES
     (1, 'Dom Quixote'),
     (2, 'O Pequeno Príncipe'),
